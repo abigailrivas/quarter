@@ -24,6 +24,8 @@
     --font-normal-size: 1rem;
     --font-small-size: 0.75rem;
 
+    --line-height-text: 1.5rem;
+
 }
 
 /*============ BASE ============*/
@@ -98,15 +100,8 @@ ul{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color--brand--third);
     border-left: 1px solid var(--color--brand--second);
     border-right: 1px solid var(--color--brand--second);
-}
-
-.sticky__nav{
-    top: 0;
-    background-color: var(--color--brand--third);
-    z-index: 100;
 }
 
 .nav__menu{
@@ -141,6 +136,11 @@ ul{
     font-size: var(--font-small-size);
 }
 
+.fixed-header{
+    top: 0;
+    background-color: var(--color--brand--third);
+}
+
 /*============ HOME ============*/
 .home__logo{
     padding: 5rem 2rem 3rem;
@@ -166,7 +166,7 @@ ul{
 .home__info{
     display: flex;
     flex-direction: column;
-    row-gap: 2rem;
+    row-gap: 1.5rem;
     width: 50%;
 }
 
@@ -175,7 +175,7 @@ ul{
 }
 .home__info__text{
     font-size: var(--font-normal-size);
-    line-height: 1.5rem;
+    line-height: var(--line-height-text);
 }
 
 .banner__container{
@@ -361,39 +361,81 @@ ul{
 /*============ TESTIMONIALS ============*/
 .testimonials{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    row-gap: 1rem;
+    column-gap: 1rem;
     background-color: var(--color--brand--second);
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
 }
 
 .testimonial{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
     align-items: center;
+    padding: 1rem;
     border: 1px solid white;
-    justify-content: center;
-    margin: 2rem;
-    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.testimonial:before{
+    content: "";
+    left: 20%;
+    position: absolute;
+    border: 1px solid white;
+    background-color: var(--color--brand--second);
+    border-top: none;
+    border-left: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    bottom: 0.2rem;
+    transform: rotate(45deg) translate(100%);
 }
 
 .testimonial__text{
     color: var(--color--text--light);
-    text-align: center;
+    line-height: var(--line-height-text);
+    margin-bottom: 1rem;
+
 }
 
 .testimonial__user{
     color: var(--color--text--light);
     font-family: var(--font-family-first);
+    font-style: italic;
 }
+
+.testimonial:nth-child(1){
+    transform: translateY(1rem);
+}
+
+.testimonial:nth-child(2){
+    transform: translateX(-1rem);
+}
+
+
+.testimonial:nth-child(4){
+    transform: translateX(-2rem);
+}
+
+.testimonial:nth-child(5){
+    transform: translateY(-1rem);
+    transform: translateX(-1rem);
+}
+
+
+.testimonial:nth-child(6){
+    transform: translateX(-2rem);
+}
+
 
 /*============ SPOTIFY ============*/
 .spotify{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     width: 100%;
     border-top: 0;
-    height: 500px;
+    height: 550px;
 }
 
 .spotify__playlist{
@@ -402,12 +444,21 @@ ul{
     border-right: 1px solid var(--color--brand--second);
 }
 
+.spotify__playlist__link{
+    position: absolute;
+    left: 10rem;
+    margin-top: 5rem;
+}
+
 .spotify__playlist img{
     width: 100%;
     object-fit: cover;
 }
 
 .spotify__description{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
     width: 50%;
@@ -417,6 +468,11 @@ ul{
     font-size: var(--font-big-size);
     margin-bottom: 2rem;
 }
+
+.spotify__description__text{
+    line-height: 1.5rem;
+}
+
 
 /*============ Footer ============*/
 .footer{
