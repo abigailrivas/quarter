@@ -27,7 +27,7 @@
                     <a href="/quarter/merch_page/merch.html" class="nav__item">Merch</a>
                 </li>
                 <li class="nav__link">
-                    <a href="/quarter/merch_page/products/quarter/quarter.html" class="nav__item">Gin</a>
+                    <a href="/quarter/merch_page/products/quarter/quarter.html" class="nav__item actual-link">Gin</a>
                 </li>
             </ul>
             <a href="/quarter/main_page/index.html" class="logo">
@@ -49,8 +49,33 @@
     </header>
     <main class="main">
         <section class="quarter">
-            <div class="quarter__slider">
-                <img src="/quarter/main_page/assets/images/shop__product__gin.PNG" alt="">
+            <div class="slideshow-container">
+                <div class="slide">
+                    <img src="/quarter/main_page/assets/images/shop__product__gin.PNG" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/quarter/merch_page/products/quarter/assets/images/quarter_1.PNG" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/quarter/merch_page/products/quarter/assets/images/quarter_3.PNG" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/quarter/merch_page/products/quarter/assets/images/quarter_2.PNG" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/quarter/merch_page/products/quarter/assets/images/quarter_4.PNG" alt="">
+                </div>
+
+                <a class="pre" onclick="plusSlides(-1)"><i class="ri-arrow-left-line"></i></a>
+                <a class="post" onclick="plusSlides(1)"><i class="ri-arrow-right-line"></i></a>
+
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
             </div>
             <div class="quarter__description">
                 <h2>Quarter G/N</h2>
