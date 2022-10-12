@@ -1,3 +1,29 @@
+:root{
+    /*============ Color ============*/
+    --color--brand--first: #ea5f00;
+    --color--brand--second: #1d1d1b;
+    --color--brand--third: #f4ede9;
+
+    --color--text--light: #f4ede9;
+    --color--text--dark: #1e1e1c;
+
+    --color--button-bg: #1e1e1c;
+
+    --color--border: #1e1e1c;
+
+    /*============ Fonts & typography ============*/
+    --font-family-first: 'Inter Tight', sans-serif; 
+    --font-family-text: 'IBM Plex Mono', monospace;
+
+    --font-bigger-size: 4rem;
+    --font-big-size: 2.5rem;
+    --font-normal-size: 1rem;
+    --font-small-size: 0.75rem;
+
+    --line-height-text: 1.5rem;
+
+}
+
 .actual-link{
     text-decoration: underline;
     text-underline-offset: 0.5rem;
@@ -33,11 +59,11 @@
 
 .pre, .post{
     cursor: pointer;
-    color: white;
+    color: black;
     position: absolute;
     padding: 0 1rem;
     font-size: 2rem;
-    top: 60%;
+    top: 50%;
 }
 
 .post{
@@ -55,7 +81,7 @@
 
 .dot{
     display: inline-block;
-    border: 1px solid white;
+    border: 1px solid black;
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
@@ -64,10 +90,203 @@
 }
 
 .active{
-    background-color: white;
+    background-color: black;
 }
 
 .quarter__description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 50%;
+    row-gap: 0.5rem;
     border-left: 1px solid black;
+    padding: 0 4rem;
+}
+
+.quarter__description-subtitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.quarter__description-info{
+    font-style: italic;
+}
+
+.quarter__description-subtitle p{
+    margin-top: 0.5rem;
+    font-size: var(--font-small-size);
+}
+
+.line{
+    margin: 0.5rem 0;
+    height: 0.02rem;
+    background-color: black;
+}
+
+.quantity-title{
+    text-transform: uppercase;
+    font-size: var(--font-normal-size);
+}
+
+.quantity-container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    align-items: center;
+}
+
+.quantity-item{
+    margin-top: 0.2rem;
+    display: flex;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1.4px solid var(--color--brand--second);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-text);   
+    cursor: pointer;
+}
+
+.quantity-active{
+    width: 2.2rem;
+    height: 2.2rem;
+    color: white;
+    background-color: var(--color--brand--second);
+
+}
+
+.product__choices{
+    margin: 1rem 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-button, .secondary-button{
+    display: flex;
+    column-gap: 0.3rem;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+
+.secondary-button{
+    font-size: var(--font-small-size);
+    border: 1px solid var(--color--brand--second);
+}
+
+.product-button, .secondary-button p{
+    text-transform: uppercase;
+}
+
+.quarter-text{
+    margin-top: 1rem;
+    line-height: var(--line-height-text);
+    font-size: var(--font-small-size);
+}
+
+/* ========= ACCORDION & REVIEWS ======== */
+.accordion-and-reviews{
+    display: flex;
+}
+
+.accordion__container{
+    width: 50%;
+    padding: 5rem 4rem;
+}
+
+.accordion__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color--brand--second);
+    margin: 1rem 0;
+}
+
+.accordion__text{
+    font-family: var(--font-family-first);
+    line-height: var(--line-height-text);
+}
+
+.reviews{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid var(--color--brand--second);
+}
+
+.reviews h4{
+    font-size: 1.2rem;
+}
+
+.reviews__content{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    padding: 0 4rem;
+    align-items: center;
+}
+
+.review__arrow{
+    font-size: 1.5rem;
+}
+
+.reviews__description{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    text-align: center;
+}
+
+.reviews__text, .reviews__user{
+    font-style: italic;
+}
+
+.reviews__user{
+    font-family: var(--font-family-first);
+    font-weight: 600;
+}
+
+
+/* ========= DRINKS ======== */
+
+.drinks{
+    padding: 3rem 0;
+}
+
+.drinks h2{
+    text-align: center;
+    font-size: var(--font-big-size);
+    padding-bottom: 3rem;
+    text-transform: capitalize;
+    font-style: italic;
+    border-bottom: 1px solid var(--color--brand--second);
+}
+
+
+
+/* ========= ABOUT US ======== */
+.about-us{
+    height: 700px;
+    background-image: url("/quarter/merch_page/products/quarter/assets/images/quarter_bg.PNG");
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4rem;
+}
+
+.about-us h1{
+    color: white;
+    font-size: var(--font-bigger-size);
+}
+
+.about-us-title-change{
+    font-family: var(--font-family-text);
 }

@@ -80,30 +80,30 @@
             <div class="quarter__description">
                 <h2>Quarter G/N</h2>
                 <div class="quarter__description-subtitle">
-                    <p>Distilled in England</p>
+                    <p class="quarter__description-info">Distilled in England</p>
                     <p>12% vol | 70cl</p>
                 </div>
                 <div class="line"></div>
-                <p>Quantity</p>
-                <div class="quantity">
-                    <span class="quantity__item">1</span>
-                    <span class="quantity__item">2</span>
-                    <span class="quantity__item">3</span>
+                <p class="quantity-title">Quantity</p>
+                <div class="quantity-container">
+                    <span class="quantity-item quantity-active" onclick="quantitySelection(0)">1</span>
+                    <span class="quantity-item" onclick="quantitySelection(1)">2</span>
+                    <span class="quantity-item" onclick="quantitySelection(2)">6</span>
                 </div>
                 <div class="product__choices">
-                    <div class="cta product_button">
-                        <p>£ 27.00 - Add to bag</p>
-                        <span></span>
+                    <div class="cta product-button">
+                        <p><span> £ 27.00 </span>- Add to bag</p>
+                        <span>|</span>
                         <i class="ri-arrow-right-up-line"></i>
                     </div>
-                    <div class="secondary_button">
-                        <p>£ 24.30 - Subscribe</p>
-                        <span></span>
+                    <div class="secondary-button">
+                        <p><span> £ 24.30 </span> - Subscribe</p>
+                        <span>|</span>
                         <i class="ri-arrow-right-up-line"></i>
                     </div>
                 </div>
                 <h4>Who said it had to be all or nothing?</h4>
-                <p>The world’s first quarter strength G/N, delivering all the flavour and experience you’d expect from a full-strength gin, just with a fraction of the alcohol. Distilled and blended in England for that lip-smacking taste to create memorable lower strength gin cocktails.</p>
+                <p class="quarter-text">The world’s first quarter strength G/N, delivering all the flavour and experience you’d expect from a full-strength gin, just with a fraction of the alcohol. Distilled and blended in England for that lip-smacking taste to create memorable lower strength gin cocktails.</p>
             </div>
         </section>
         <div class="clients__container">
@@ -148,15 +148,107 @@
                 </div>
             </div>
         </div>
-        <section>
-            <div class="accordion">
+        <section class="accordion-and-reviews">
+            <div class="accordion__container">
+                <div class="accordion__group">
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h4 class="accordion__header-title">
+                                Why G/N?
+                            </h4>
+                            <i class="ri-arrow-right-line"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <p class="accordion__text">
+                                The powers that be (the Gin guild) claim that to be called a gin, the spirit must be above 37.5% abv. We think it’s nonsense as we distill and blend our G/N in the exact same method.
+                                <a href="/quarter/about-us/aboutus.html">Read more here</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h4 class="accordion__header-title">
+                                Production method
+                            </h4>
+                            <i class="ri-arrow-right-line"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <p class="accordion__text">
+                                We worked with the best distiller in the game, to turn the concept of gin on its head and craft the world’s first London Dry Gin at 12% Vol. A year in product development, 10,000 juniper berries, 1,000 oranges, 100 grapefruit peels and 60 liquids later, we finally cracked it!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h4 class="accordion__header-title">
+                                Botanicals
+                            </h4>
+                            <i class="ri-arrow-right-line"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <p class="accordion__text">
+                                As a London Dry, you won’t be surprised to see the usual suspects of juniper, coriander and angelica featuring in our liquid. However, it is the inclusion of the orange peel, grapefruit peel and sweet orange that makes unique blend so refreshing and delicious!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h4 class="accordion__header-title">
+                                Nose
+                            </h4>
+                            <i class="ri-arrow-right-line"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <p class="accordion__text">
+                                Once you pop the cork, you will be hit with a fresh citrussy smack of orange sherbet, and will feel compelled to get pouring and mixing up your favourite gin cocktails (no measures required!).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h4 class="accordion__header-title">
+                                Flavour
+                            </h4>
+                            <i class="ri-arrow-right-line"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <p class="accordion__text">
+                                ‘Due to our unique production process, where we use a higher contraction of botanicals and a longer maceration process than with full-strength gins. You’ll taste a London Dry Gin flavour profile, but also get a fresh punch of citrus from the orange and grapefruit peel.’
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h4 class="accordion__header-title">
+                                Mouthfeel
+                            </h4>
+                            <i class="ri-arrow-right-line"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <p class="accordion__text">
+                                Once on the palette, our refreshingly light G/N delivers all the viscosity, body and warmth of a fuller strength spirit. You will be left with a nice slow, warm burn and the botanicals slowly dancing around the mouth, inviting you to take another sip.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
             <div class="reviews">
                 <h4>The 5 reviews speak for themselves</h4>
+                <div class="reviews__content">
+                    <i class="ri-arrow-left-line review__arrow"></i>
+                    <div class="reviews__description">
+                        <p class="reviews__text">
+                            "It is such a relief to find something that tastes alcoholic but is not strong. Thank you for making this for those of us who are not up to full strength spirits!"
+                        </p>
+                        <p class="reviews__user"> - Alister P</p>
+                    </div>
+                    <i class="ri-arrow-right-line review__arrow"></i>
+                </div>
             </div>
         </section>
-        <section>
+        <section class="drinks">
             <h2>Fancy a drink?</h2>
             <div class="drinks__container">
                 <div class="drink">
@@ -181,6 +273,11 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="about-us">
+            <h1>A <span class="about-us-title-change">quest</span> for <br>
+                <span class="about-us-title-change">quality</span>
+            </h1>
         </section>
     </main>
     <footer>
