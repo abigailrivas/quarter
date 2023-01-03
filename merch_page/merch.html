@@ -29,6 +29,7 @@
                     <a href="/merch_page/products/quarter/quarter.html">Gin</a>
                 </li>
             </ul>
+
             <div class="nav__menu">
                 <ul class="nav__menu">
                     <li class="nav__menu__item">
@@ -41,7 +42,7 @@
                         </a>
                     </li>
                 </ul>
-                <a href="" class="cta">get 10% off</a>
+                <a href="" class="cta" id="fixed-cta-menu">get 10% off</a>
             </div>
         </nav>
         <a href="/main_page/index.html">
@@ -50,77 +51,91 @@
     </header>
     <main class="main">
         <section class="merch">
-            <div class="top__merch__container">
-                <a href="/merch_page/products/quarter/quarter.html">
-                    <div class="shop__product" id="shop__product-small">
-                        <img src="/merch_page/assets/images/merch_quarter.PNG" alt="quarter" class="shop__product_img" id="shop__product__img-small">
-                        <div class="shop__product__content">
-                            <p class="shop__product__name" id="shop__product__name-small">£ 27.00</p>
-                            <a href="" class="shop__product__button">
-                                <p class="shop__button__text">
-                                    Shop now
-                                </p>
-                                <span>|</span>
-                                <i class="ri-arrow-right-up-line"></i>
-                            </a>
-                        </div>
-                    </div>
-                </a>
-                <div class="shop__product" id="shop__product-small">
-                    <img src="/merch_page/assets/images/merch_double_dutch.PNG" alt="double dutch" class="shop__product_img" id="shop__product__img-small">
-                    <div class="shop__product__content">
-                        <p class="shop__product__name" id="shop__product__name-small">£ 3.50</p>
-                        <a href="" class="shop__product__button">
-                            <p class="shop__button__text">
-                                Shop now
-                            </p>
-                            <span>|</span>
-                            <i class="ri-arrow-right-up-line"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="top-merch-container">
                 <div class="shop__product">
-                    <img src="/merch_page/assets/images/merch_double_dutch_skinny.PNG" alt="double dutch skinny" class="shop__product_img" id="shop__product__img-small">
+                    <a href="/merch_page/products/quarter/quarter.html">
+                        <img class="shop__product--all-border" src="/merch_page/assets/images/merch_quarter.PNG" alt="gin">
+                    </a>
                     <div class="shop__product__content">
-                        <p class="shop__product__name" id="shop__product__name-small">£ 3.50</p>
-                        <a href="" class="shop__product__button">
-                            <p class="shop__button__text">
-                                Shop now
-                            </p>
+                        <p class="shop__product__name">£ 27.00</p>
+                        <a href="#shop" onclick="addToBag()" class="shop__product__button">
+                            Shop now
                             <span>|</span>
-                            <i class="ri-arrow-right-up-line"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="shop__product">
-                    <img src="/merch_page/assets/images/merch_dash.PNG" alt="dash" class="shop__product_img" id="shop__product__img-small">
-                    <div class="shop__product__content">
-                        <p class="shop__product__name" id="shop__product__name-small">£ 6.00</p>
-                        <a href="" class="shop__product__button">
-                            <p class="shop__button__text">
-                                Shop now
-                            </p>
-                            <span>|</span>
-                            <i class="ri-arrow-right-up-line"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="second__merch">
-                <div class="shop__product">
-                    <img src="	https://cdn.shopify.com/s/files/1/0575/8330/4891/products/Quater_Gin_04-min_2048x.png?v=1635172114 alt="dash" class="shop__product_img" id="shop__product__img-small">
-                    <div class="shop__product__content">
-                        <p class="shop__product__name" id="shop__product__name-small">£ 6.00</p>
-                        <a href="" class="shop__product__button">
-                            <p class="shop__button__text">
-                                Shop now
-                            </p>
-                            <span>|</span>
-                            <i class="ri-arrow-right-up-line"></i>
+                            <i class="ri-arrow-right-up-line shop__product__button__arrow"></i>
                         </a>
                     </div>
                 </div>
 
+                <div class="shop__product">
+                    <a href="/merch_page/products/quarter/quarter.html">
+                        <img class="shop__product--all-border" src="/merch_page/assets/images/merch_double_dutch.PNG" alt="double dutch">
+                    </a>
+                    <div class="shop__product__content">
+                        <p class="shop__product__name">£ 3.50</p>
+                        <a href="#shop" onclick="addToBag()" class="shop__product__button">
+                            Shop now
+                            <span>|</span>
+                            <i class="ri-arrow-right-up-line shop__product__button__arrow"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="shop__product">
+                    <a href="/merch_page/products/quarter/quarter.html">
+                        <img class="shop__product--all-border" src="/merch_page/assets/images/merch_double_dutch_skinny.PNG" alt="double dutch skinny">
+                    </a>
+                    <div class="shop__product__content">
+                        <p class="shop__product__name">£ 3.50</p>
+                        <a href="#shop" onclick="addToBag()" class="shop__product__button">
+                            Shop now
+                            <span>|</span>
+                            <i class="ri-arrow-right-up-line shop__product__button__arrow"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="shop__product">
+                    <a href="/merch_page/products/quarter/quarter.html">
+                        <img class="shop__product--all-border" src="/merch_page/assets/images/merch_dash.PNG" alt="dash">
+                    </a>
+                    <div class="shop__product__content">
+                        <p class="shop__product__name">£ 6.00</p>
+                        <a href="#shop" onclick="addToBag()" class="shop__product__button">
+                            Shop now
+                            <span>|</span>
+                            <i class="ri-arrow-right-up-line shop__product__button__arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-two-col">
+                <div class="shop__product">
+                    <a href="/merch_page/products/quarter/quarter.html">
+                        <img class="shop__product--all-border" src="/merch_page/assets/images/merch_quarter_small.PNG" alt="quarter giftbox">
+                    </a>
+                    <div class="shop__product__content">
+                        <p class="shop__product__name">£ 18.00</p>
+                        <a href="#shop" onclick="addToBag()" class="shop__product__button">
+                            Shop now
+                            <span>|</span>
+                            <i class="ri-arrow-right-up-line shop__product__button__arrow"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="shop__product">
+                    <a href="/merch_page/products/quarter/quarter.html">
+                        <img class="shop__product--all-border" src="/merch_page/assets/images/merch_dash.PNG" alt="dash">
+                    </a>
+                    <div class="shop__product__content">
+                        <p class="shop__product__name">£ 6.00</p>
+                        <a href="#shop" onclick="addToBag()" class="shop__product__button">
+                            Shop now
+                            <span>|</span>
+                            <i class="ri-arrow-right-up-line shop__product__button__arrow"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

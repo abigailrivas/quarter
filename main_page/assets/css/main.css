@@ -192,44 +192,6 @@
     margin-bottom: 1.5rem;
 }
 
-.shop__product{
-    width: 25%;
-}
-
-.shop__product img{
-    height: 500px;
-    object-fit: cover;
-    border-left: 1px solid var(--color--brand--second);
-}
-
-.shop__product__content{
-    display: flex;
-    transform: translateY(-1rem);
-}
-
-.shop__product__name{
-    padding: 1rem;
-    border: 1px solid var(--color--brand--second);
-    background-color: white;
-    width: 50%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.shop__product__button{
-    background-color: var(--color--brand--second--dark);
-    padding: 1rem 0;
-    width: 50%;
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.shop__product__button:hover .shop__product__button__arrow{
-    transform: rotate(45deg);
-}
-
 /*============ TESTIMONIALS ============*/
 .testimonials{
     background-color: var(--color--brand--second--dark);
