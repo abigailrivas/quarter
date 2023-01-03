@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&display=swap');
+
+
+/*============ VARIABLES ============*/
+:root{
+    /*============ Color ============*/
+    --color--brand--first: #ea5f00;
+    --color--brand--second: #1d1d1b;
+    --color--brand--third: #f4ede9;
+
+    --color--brand--third--light: #f4ede9;
+    --color--brand--second--dark: #1e1e1c;
+
+    --color--button-bg: #1e1e1c;
+
+    --color--brand--second--dark: #1e1e1c;
+
+    /*============ Fonts & typography ============*/
+    --font-family-first: 'Inter Tight', sans-serif; 
+    --font-family-text: 'IBM Plex Mono', monospace;
+
+    --font-bigger-size: 4rem;
+    --font-big-size: 2.5rem;
+    --font-normal-size: 1rem;
+    --font-small-size: 0.75rem;
+
+    --line-height-text: 1.5rem;
+
+}
+
+/*============ BASE ============*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--color--brand--third);
+    color: var(--color--brand--second--dark);
+}
+
+section{
+    border: 1px solid var(--color--brand--second--dark);
+    border-bottom: none;
+}
+
+main{
+    margin: 1rem 1rem 0rem;
+}
+
+footer{
+    margin: 0 1rem 1rem;
+    border-bottom: 1px solid var(--color--brand--second);
+}
+
+img{
+    max-width: 100%;
+}
+
+h1,h2,h3{
+    text-transform: uppercase;
+    font-family: var(--font-family-first);
+}
+
+h4{
+    font-family: var(--font-family-first);
+}
+
+p, a{
+    font-family: var(--font-family-text);
+}
+
+p{
+    line-height: var(--line-height-text);
+}
+
+a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color--brand--second);
+}
+
+ul{
+    list-style: none;
+}
+
+/*============ HEADER ============*/
+.header{
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    top: 1rem;
+    border-bottom: 1px solid var(--color--brand--second);
+    height: 3rem;
+    padding-left: 2rem;
+}
+
+.fixed-header{
+    top: 0;
+    background-color: var(--color--brand--third);
+    z-index: 1000;
+    border-left: 1px solid var(--color--brand--second--dark);
+}
+
+.non-home-header{
+    top: 0;
+    background-color: var(--color--brand--third);
+    border: 1px solid var(--color--brand--second--dark);
+
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__menu{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__menu__item{
+    font-family: var(--font-family-text);
+}
+
+.nav__menu__item:hover{
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.cart__icon{
+    width: 40px;
+}
+
+.count{
+    position: absolute;
+    top: 1.2rem;
+    font-size: 0.9rem;
+    background-color: var(--color--brand--third--light);
+    border: 1px solid var(--color--brand--second--dark);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.logo--header{
+    display: none;
+    width: 150px;
+    position: fixed;
+    top: 0.3rem;
+    left: 45%;
+}
+
+.logo--header-fixed{
+    display: block;
+    top: 0.5rem;
+}
+
+/*============ BUTTONS ============*/ 
+
+.cta{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color--brand--second--dark);
+    color: var(--color--brand--third--light);
+    font-family: var(--font-family-text);
+    background-color: var(--color--brand--first);
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: var(--font-small-size);
+}
+
+.btn-second{
+    background-color: var(--color--brand--second--dark);
+    color: white;
+}
+
+.btn-third{
+    border: 1px solid var(--color--brand--second--dark);
+}
+
+.btn-second, .btn-third{
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.btn--icon{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    margin-right: auto;
+    margin-top: 1.5rem;
+}
+
+.btn--icon:hover .btn--icon__arrow{
+    transform: rotate(45deg);
+}
+
+
+/*============ SHOP ============*/ 
+
+.shop__product__content{
+    display: flex;
+    transform: translateY(-1rem);
+}
+
+.shop__product__name{
+    padding: 1rem;
+    border: 1px solid var(--color--brand--second);
+    background-color: white;
+    width: 50%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.shop__product__button{
+    background-color: var(--color--brand--second--dark);
+    padding: 1rem 0;
+    width: 50%;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.shop__product__button:hover .shop__product__button__arrow{
+    transform: rotate(45deg);
+}
+
+
+/*============ GRID ============*/ 
+.grid-two-col{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+/*============ TIPOGRAPHY ============*/ 
+.text{
+    font-family: var(--font-family-text);
+    font-weight: 200;
+    text-transform: lowercase;
+}
+
+/*============ FOOTER ============*/ 
+
+.footer{
+    display: flex;
+}
+
+.footer__image{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    width: 15%;
+}
+
+.footer__image, .footer__subscription{
+    border-right: 1px solid var(--color--brand--second);
+}
+
+.footer__subscription{
+    padding: 3rem 2rem;
+    width: 35%;
+}
+
+.footer__subscription__text{
+    font-family: var(--font-family-first);
+}
+
+.footer__subscription__form{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.input__email{
+    width: 200px;
+    padding: 0.6rem;
+    font-family: var(--font-family-text);
+    font-size: var(--font-small-size);
+}
+
+.footer__nav__container{
+    display: flex;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    column-gap: 2rem;
+}
+
+.footer__nav{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.footer__nav li:hover{
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+}
+
+.social-media__container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    margin-left: 1rem;
+}

@@ -1,0 +1,330 @@
+@import "/base/variables&base.css";
+
+/*============ POP UP ============*/
+.adult-verification__wrapper{
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.548);
+}
+
+.adult-verification{
+    background-color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 450px;
+    height: 350px;
+    border: 1px solid var(--color--brand--second--dark);
+}
+
+.adult-verification h1, .adult-verification p{
+    text-align: center;
+}
+
+.adult-verification div{
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+/*============ HOME ============*/
+
+.home__logo{
+    padding: 5rem 2rem 3rem;
+}
+
+.home__content{
+    padding: 1rem 2rem; 
+    display: flex;
+    flex-direction: row;
+}
+
+.home__content-title{
+    font-size: var(--font-bigger-size);
+    width: 50%;
+}
+
+.home__info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    width: 50%;
+}
+
+.home__info__subtitle{
+    font-size: var(--font-big-size);
+}
+.home__info__text{
+    font-size: var(--font-normal-size);
+}
+
+.banner__container{
+    display: flex;
+    margin-top: 1rem;
+    background-color: var(--color--brand--second--dark);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.banner__content{
+    animation: move 30s linear infinite;
+}
+
+.banner__text{
+    display: inline-block;
+    color: var(--color--brand--third--light);
+    text-transform: uppercase;
+    padding: .75rem 3rem;
+}
+
+@keyframes move{
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(-100%,0);
+    }
+}
+
+/*============ PRODUCT ============*/
+.product{
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.product__description{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+}
+
+.product__title, .product__text{
+    text-transform: uppercase;
+}
+
+.product__image{
+    border: 1px solid var(--color--brand--second--dark);
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1rem;
+}
+
+#product-image1{
+    border-top-left-radius: 12rem;
+}
+
+#product-image2{
+    border-bottom-left-radius: 12rem;
+}
+
+#product-image3{
+    border-top-right-radius: 12rem;
+}
+
+#product-image4{
+    border-bottom-right-radius: 12rem;
+}
+
+/*============ CLIENTS ============*/
+
+.clients__container{
+    display: flex;
+    height: 140px;
+    border: 1px solid var(--color--brand--second);
+    border-bottom: none;
+    overflow: hidden;
+    align-items: center;
+}
+
+.clients__content{
+    display: flex;
+    justify-content: space-between;
+    min-width: 200vw;
+    animation: clients-anim 20s linear infinite;
+    align-items: center;
+}
+
+.clients__logo{
+    width: 240px;
+    margin-right: 5%;
+}
+
+@keyframes clients-anim{
+    0%{
+        transform: translate(-200vw,0);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+
+/*============ SHOP ============*/
+.shop{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3rem;
+}
+
+.shop__description{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    width: 25%;
+}
+
+.shop__title{
+    font-size: var(--font-big-size);
+    margin-bottom: 1.5rem;
+}
+
+.shop__product{
+    width: 25%;
+}
+
+.shop__product img{
+    height: 500px;
+    object-fit: cover;
+    border-left: 1px solid var(--color--brand--second);
+}
+
+.shop__product__content{
+    display: flex;
+    transform: translateY(-1rem);
+}
+
+.shop__product__name{
+    padding: 1rem;
+    border: 1px solid var(--color--brand--second);
+    background-color: white;
+    width: 50%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.shop__product__button{
+    background-color: var(--color--brand--second--dark);
+    padding: 1rem 0;
+    width: 50%;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.shop__product__button:hover .shop__product__button__arrow{
+    transform: rotate(45deg);
+}
+
+/*============ TESTIMONIALS ============*/
+.testimonials{
+    background-color: var(--color--brand--second--dark);
+    padding: 2rem;
+}
+
+.testimonials__container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+.testimonial{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    padding: 1rem 1rem;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.testimonial:before{
+    content: "";
+    position: absolute;
+    left: 20%;
+    bottom: 0.2rem;
+    border: 1px solid white;
+    border-top: none;
+    border-left: none;
+    background-color: var(--color--brand--second--dark);
+    width: 1.2rem;
+    height: 1.2rem;
+    transform: rotate(45deg) translate(100%);
+}
+
+.testimonial__text{
+    margin-bottom: 1rem;
+}
+
+.testimonial__text, .testimonial__user{
+    color: var(--color--brand--third--light);
+}
+
+.testimonial__user{
+    font-family: var(--font-family-first);
+    font-style: italic;
+}
+
+.testimonial:nth-child(1){
+    transform: translateX(-1rem);
+}
+
+.testimonial:nth-child(2){
+    transform: translateX(-1rem);
+}
+
+.testimonial:nth-child(3){
+    transform: translate(-1rem);
+}
+
+/*============ SPOTIFY ============*/
+.spotify{
+    display: flex;
+    border-top: none;
+    height: 500px;
+}
+
+.spotify__playlist{
+    display: flex;
+    width: 50%;
+    border-right: 1px solid var(--color--brand--second--dark);
+}
+
+.spotify__playlist__link{
+    position: absolute;
+    left: 10rem;
+    margin-top: 3rem;
+}
+
+.spotify__playlist img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.spotify__description{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 0 2rem 4rem;
+    width: 50%;
+}
+
+.spotify__description__title{
+    font-size: var(--font-big-size);
+    margin-bottom: 2rem;
+}
+

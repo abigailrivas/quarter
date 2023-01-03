@@ -22,10 +22,12 @@
 
 
     <!--============== FAVICON ==============-->
-    <link rel="shortcut icon" href="/quarter/main_page/assets/images/favicon.PNG" type="image/x-icon">
+    <link rel="shortcut icon" href="/main_page/assets/images/favicon.PNG" type="image/x-icon">
 
     <!--============== CSS ==============-->
-    <link rel="stylesheet" href="/quarter/main_page/assets/css/style.css">
+    <link rel="stylesheet" href="/main_page/assets/css/main.css">
+    <link rel="stylesheet" href="/base/variables&base.css">
+
 
     <!--============== REMIXICON ==============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -35,40 +37,55 @@
     <header class="header" id="header">
         <nav class="nav">
             <ul class="nav__menu">
-                <li class="nav__link">
-                    <a href="/quarter/merch_page/merch.html" class="nav__item">Merch</a>
+                <li class="nav__menu__item">
+                    <a href="/merch_page/merch.html">Merch</a>
                 </li>
-                <li class="nav__link">
-                    <a href="/quarter/merch_page/products/quarter/quarter.html" class="nav__item">Gin</a>
-                </li>
-            </ul>
-            <ul class="nav__menu">
-                <li class="nav__link">
-                    <a href="" class="nav__item">About us</a>
-                </li>
-                <li class="nav__link">
-                    <a href="" class="nav__item"><img src="/quarter/main_page/assets/images/shopping-bag (1).png" alt="" class="cart__icon"></a>
-                    <div class="count"></div>
-                </li>
-                <li class="nav__link">
-                    <a href="" class="cta">get 10% off</a>
+                <li class="nav__menu__item">
+                    <a href="/merch_page/products/quarter/quarter.html">Gin</a>
                 </li>
             </ul>
+            <div class="nav__menu">
+                <ul class="nav__menu">
+                    <li class="nav__menu__item">
+                        <a href="/about-us_page/about-us.html">About us</a>
+                    </li>
+                    <li class="nav__menu__item">
+                        <a href="">
+                            <img src="/main_page/assets/images/shopping-bag (1).png" alt="" class="cart__icon">
+                            <div class="count" id="counter">3</div>
+                        </a>
+                    </li>
+                </ul>
+                <a href="" class="cta">get 10% off</a>
+            </div>
         </nav>
+        <img src="/main_page/assets/images/quarter-logo.svg" alt="logo" class="logo--header" id="logoHeader">
     </header>
     <main class="main">
-        <!--============== HEADER ==============-->
+        <div class="adult-verification__wrapper" id="adultVerification">
+                <div class="adult-verification">
+                    <h1>We need to see some proof.</h1>
+                    <p>We may only be 1/4 strength, but you still need to be over 18 to get in!</p>
+                    <div>
+                        <a href="#" class="btn-second" onclick="adultVerification()">I'm 18</a>
+                        <a href="#" class="btn-third">I'm 18, but I'm lying.</a>
+
+                    </div>
+                </div>
+        </div>
+
+        <!--============== HOME ==============-->
         <section class="home">
             <div class="home__logo">
-                <img src="/quarter/main_page/assets/images/quarter-logo.svg" alt="logo">
+                <img src="/main_page/assets/images/quarter-logo.svg" alt="logo">
             </div>
             <div class="home__content">
                 <h1 class="home__content-title">
-                    <span class="text__style">12%</span><span style="text-transform:lowercase;"> vol</span><br>
-                    <em class="text__style">light</em> spirits
+                    <span class="text">12%</span><span style="text-transform:lowercase;"> vol</span><br>
+                    <em class="text">light</em> spirits
                 </h1>
                 <div class="home__info">
-                    <h2 class="home__info__subtitle">Spirits <em class="text__style">are</em> too <em class="text__style">strong</em></h2>
+                    <h2 class="home__info__subtitle">Spirits <em class="text">are</em> too <em class="text">strong</em></h2>
                     <p class="home__info__text">
                         …for most drinking occasions. That is why we created Quarter <br>
                         strength spirits. So here’s to light cocktails, with all the <br>
@@ -92,124 +109,128 @@
                 </div>
             </div>
         </section>
+
+        <!--============== PRODUCT ==============-->
         <section class="product">
             <div class="product__description">
-                <img src="/quarter/main_page/assets/images/home_product1.PNG" alt="" class="product__image" id="product-image1">
+                <img src="/main_page/assets/images/home_product1.PNG" alt="" class="product__image" id="product-image1">
                 <h2 class="product__title">1/4 alcohol</h2>
                 <p class="product__text">12% vol | 24 proof</p>
             </div>
             <div class="product__description">
-                <img src="/quarter/main_page/assets/images/home_product2.PNG" alt="" class="product__image" id="product-image2">
+                <img src="/main_page/assets/images/home_product2.PNG" alt="" class="product__image" id="product-image2">
                 <h2 class="product__title">1/4 calories</h2>
                 <p class="product__text">19 kcal per 25%</p>
             </div>
             <div class="product__description">
-                <img src="/quarter/main_page/assets/images/home_product3.PNG" alt="" class="product__image" id="product-image3">
+                <img src="/main_page/assets/images/home_product3.PNG" alt="" class="product__image" id="product-image3">
                 <h2 class="product__title">1/4 strength</h2>
                 <p class="product__text">0.3 units per serve</p>
             </div>
             <div class="product__description">
-                <img src="/quarter/main_page/assets/images/home_product4.PNG" alt="" class="product__image" id="product-image4">
+                <img src="/main_page/assets/images/home_product4.PNG" alt="" class="product__image" id="product-image4">
                 <h2 class="product__title">1/4 impact</h2>
                 <p class="product__text">vegan | no sugar</p>
             </div>
         </section>
+
         <div class="clients__container">
             <div class="clients__content">
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client1.png" alt="">
+                    <img src="/main_page/assets/images/client1.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client2.png" alt="">
+                    <img src="/main_page/assets/images/client2.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client3.png" alt="">
+                    <img src="/main_page/assets/images/client3.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client4.png" alt="">
+                    <img src="/main_page/assets/images/client4.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client5.png" alt="">
+                    <img src="/main_page/assets/images/client5.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client6.png" alt="">
+                    <img src="/main_page/assets/images/client6.png" alt="">
                 </div>
             </div>
             <div class="clients__content">
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client1.png" alt="">
+                    <img src="/main_page/assets/images/client1.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client2.png" alt="">
+                    <img src="/main_page/assets/images/client2.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client3.png" alt="">
+                    <img src="/main_page/assets/images/client3.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client4.png" alt="">
+                    <img src="/main_page/assets/images/client4.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client5.png" alt="">
+                    <img src="/main_page/assets/images/client5.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client6.png" alt="">
+                    <img src="/main_page/assets/images/client6.png" alt="">
                 </div>
             </div>
         </div>
-        <section class="shop">
+
+        <!--============== SHOP ==============-->
+        <section class="shop" id="shop">
             <div class="shop__description">
                 <h3 class="shop__title">Who's <br> thirsty <br> for more?</h3>
                 <p class="shop__text">See all our merch here.</p>
-                <a href="" class="shop__button">
-                    <p class="shop__button__text">
-                        Shop now
-                    </p>
+                <a href="/merch_page/merch.html" class="btn-third btn--icon">
+                    Shop now
                     <span>|</span>
-                    <i class="ri-arrow-right-up-line"></i>
+                    <i class="ri-arrow-right-up-line btn--icon__arrow"></i>
                 </a>
             </div>
+
             <div class="shop__product">
-                <img src="/quarter/main_page/assets/images/shop__product__gin.PNG" alt="gin" class="shop__product_img">
+                <a href="/merch_page/products/quarter/quarter.html">
+                    <img src="/main_page/assets/images/shop__product__gin.PNG" alt="gin">
+                </a>
                 <div class="shop__product__content">
                     <p class="shop__product__name">Quarter G/N</p>
-                    <a href="" class="shop__product__button">
-                        <p class="shop__button__text">
-                            Add to bag
-                        </p>
+                    <a href="#shop" onclick="addToBag()" class="shop__product__button">
+                        Add to bag
                         <span>|</span>
-                        <i class="ri-arrow-right-up-line"></i>
+                        <i class="ri-arrow-right-up-line shop__product__button__arrow"></i>
                     </a>
                 </div>
             </div>
             <div class="shop__product">
-                <img src="/quarter/main_page/assets/images/shop_product__dash.PNG" alt="dash" class="shop__product_img">
+                <a href="">
+                    <img src="/main_page/assets/images/shop_product__dash.PNG" alt="dash">
+                </a>
                 <div class="shop__product__content">
-                    <p class="shop__product__name">
-                        Dash Bitter Orange & Grapefruit
-                    </p>
-                    <a href="" class="shop__product__button">
-                        <p class="shop__button__text">
-                            Add to bag
-                        </p>
+                    <p class="shop__product__name">Dash Bitter Orange & Grapefruit</p>
+                    <a href="#shop" onclick="addToBag()" class="shop__product__button">
+                        Add to bag
                         <span>|</span>
-                        <i class="ri-arrow-right-up-line"></i>
+                        <i class="ri-arrow-right-up-line shop__product__button__arrow"></i>
                     </a>
                 </div>
             </div>
             <div class="shop__product">
-                <img src="/quarter/main_page/assets/images/shop_product__tote_bag.PNG" alt="tote bag" class="shop__product_img">
+                <a href="">
+                    <img src="/main_page/assets/images/shop_product__tote_bag.PNG" alt="tote bag">
+                </a>
                 <div class="shop__product__content">
                     <p class="shop__product__name">Tote bag</p>
-                    <a href="" class="shop__product__button">
-                        <p class="shop__button__text">
-                            Add to bag
-                        </p>
+                    <a href="#shop" onclick="addToBag()" class="shop__product__button">
+                        Add to bag
                         <span>|</span>
-                        <i class="ri-arrow-right-up-line"></i>
+                        <i class="ri-arrow-right-up-line shop__product__button__arrow"></i>
                     </a>
                 </div>
             </div>
         </section>
+
+        <!--============== TESTIMONIALS ==============-->
         <section class="testimonials">
             <div class="testimonials__container">
                 <div class="testimonial">
@@ -231,6 +252,7 @@
                     <span class="testimonial__user">- Matt</span>
                 </div>
             </div>
+
             <div class="testimonials__container">
                 <div class="testimonial">
                     <p class="testimonial__text">
@@ -252,21 +274,25 @@
                 </div>
             </div>
         </section>
+
+        <!--============== SPOTIFY ==============-->
         <section class="spotify">
             <div class="spotify__playlist">
-                <img src="/quarter/main_page/assets/images/playlist_bg.PNG" alt="">
+                <img src="/main_page/assets/images/playlist_bg.PNG" alt="">
                 <iframe src="https://open.spotify.com/embed/playlist/4sZ1t0F8Ox2XvqcfR79P02" frameborder="0" height="400px" width="340px" class="spotify__playlist__link"></iframe>
             </div>
             <div class="spotify__description">
                 <h3 class="spotify__description__title">
-                    Whistle <em class="text__style">whilst</em> you <em class="text__style">shop</em>
+                    Whistle <em class="text">whilst</em> you <em class="text">shop</em>
                 </h3>
-                <p class="spotify__description__text">
+                <p>
                     We've created a playlist to get you through each Quarter of the day. Good vibes only from now on.
                 </p>
             </div>
         </section>
     </main>
+
+    <!--============== FOOTER ==============-->
     <footer>
         <section class="footer">
             <div class="footer__image">
@@ -317,37 +343,39 @@
                     </g>
                 </svg>
             </div>
+
             <div class="footer__subscription">
                 <p class="footer__subscription__text">
                     Sign up to our newsletter to join the Quarter gang
                 </p>
                 <div class="footer__subscription__form">
                     <input type="text" name="contact[email]" id="contact-email" placeholder="EMAIL" aria-label="Email" aria-required="true" required autocapitalize="off" class="input__email">
-                    <a href="" class="subscription__button">Sign up</a>
+                    <a href="" class="btn-second">Sign up</a>
                 </div>
             </div>
+            
             <div class="footer__nav__container">
                 <ul class="footer__nav">
-                    <li><a href="" class="footer__nav__item">T&Cs</a></li>
-                    <li><a href="" class="footer__nav__item">About</a></li>
-                    <li><a href="" class="footer__nav__item">Refund policy</a></li>
+                    <li><a href="">T&Cs</a></li>
+                    <li><a href="/about-us_page/about-us.html">About Us</a></li>
+                    <li><a href="">Refund policy</a></li>
                 </ul>
                 <ul class="footer__nav">
-                    <li><a href="" class="footer__nav__item">Privacy Policy</a></li>
-                    <li><a href="" class="footer__nav__item">FAQs</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">FAQs</a></li>
                 </ul>
                 <ul class="footer__nav">
-                    <li><a href="" class="footer__nav__item">Contact Us</a></li>
-                    <li><a href="" class="footer__nav__item">Shipping & Returns</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Shipping & Returns</a></li>
                 </ul>
-                <div class="social__media__container">
-                    <a href="" class="social__media">
+                <div class="social-media__container">
+                    <a href="#">
                         <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.5254 26.446C20.6167 26.446 26.3653 20.6933 26.3653 13.597C26.3653 6.50069 20.6167 0.748 13.5254 0.748C6.43407 0.748 0.685432 6.50069 0.685432 13.597C0.685432 20.6933 6.43407 26.446 13.5254 26.446Z" stroke="#1E1E1C" stroke-width="0.75" stroke-miterlimit="10"></path>
                             <path d="M14.2649 11.399V9.805C14.2649 9.805 14.2649 8.759 15.5839 8.759C16.903 8.759 16.903 8.759 16.903 8.759V6.556H14.7425C14.7425 6.556 11.9195 6.374 11.9195 9.381C11.9565 11.068 11.9195 11.398 11.9195 11.398H10.1478V14.038H11.8256V20.638H14.2649V14.038H16.5732V11.398H14.2649V11.399Z" stroke="#1E1E1C" stroke-width="0.75" stroke-miterlimit="10"></path>
                         </svg>
                     </a>
-                    <a href="" class="social__media">
+                    <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
                             <path d="M13.224 26.2581C20.3203 26.2581 26.073 20.5054 26.073 13.4091C26.073 6.31275 20.3203 0.560059 13.224 0.560059C6.12769 0.560059 0.375 6.31275 0.375 13.4091C0.375 20.5054 6.12769 26.2581 13.224 26.2581Z" stroke="#1E1E1C" stroke-width="0.75" stroke-miterlimit="10"></path>
                             <path d="M16.715 20.423H9.73298C7.78698 20.423 6.20898 18.845 6.20898 16.899V9.91804C6.20898 7.97204 7.78698 6.39404 9.73298 6.39404H16.715C18.661 6.39404 20.239 7.97204 20.239 9.91804V16.9C20.239 18.846 18.661 20.423 16.715 20.423Z" stroke="#1E1E1C" stroke-width="0.75" stroke-miterlimit="10"></path>
@@ -355,7 +383,7 @@
                             <path d="M17.101 10.0851C17.5086 10.0851 17.839 9.75472 17.839 9.34713C17.839 8.93954 17.5086 8.60913 17.101 8.60913C16.6934 8.60913 16.363 8.93954 16.363 9.34713C16.363 9.75472 16.6934 10.0851 17.101 10.0851Z" stroke="#1E1E1C" stroke-width="0.75" stroke-miterlimit="10"></path>
                         </svg>
                     </a>
-                    <a href="" class="social__media">
+                    <a href="#">
                         <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.4993 26.446C20.5906 26.446 26.3393 20.6933 26.3393 13.597C26.3393 6.50069 20.5906 0.748 13.4993 0.748C6.40801 0.748 0.659378 6.50069 0.659378 13.597C0.659378 20.6933 6.40801 26.446 13.4993 26.446Z" stroke="#1E1E1C" stroke-width="0.75" stroke-miterlimit="10"></path>
                             <path d="M11.3558 7.497C14.0359 7.548 16.6561 7.915 19.1703 8.859C19.9588 9.155 20.7242 9.531 21.4597 9.941C22.1332 10.316 22.3401 11.054 22.0533 11.703C21.7755 12.331 21.078 12.662 20.4154 12.47C20.2815 12.431 20.1526 12.367 20.0287 12.301C16.4922 10.407 12.6969 10.083 8.79363 10.476C8.00319 10.556 7.22675 10.772 6.4433 10.924C6.3054 10.951 6.1665 10.984 6.0266 10.995C5.27113 11.059 4.65057 10.623 4.49967 9.928C4.34878 9.232 4.71452 8.529 5.44301 8.328C6.34537 8.078 7.26771 7.869 8.19506 7.743C9.24132 7.602 10.3016 7.574 11.3558 7.497ZM10.9891 8.089C9.74997 8.072 8.16109 8.213 6.59619 8.566C6.23045 8.648 5.86071 8.738 5.51496 8.879C5.10425 9.047 4.93736 9.456 5.04928 9.87C5.15521 10.26 5.54193 10.522 5.96663 10.475C6.12852 10.457 6.28741 10.406 6.4473 10.364C9.17437 9.652 11.9334 9.643 14.7015 10.029C16.6461 10.3 18.5098 10.842 20.2406 11.802C20.7932 12.109 21.2888 11.989 21.5307 11.55C21.7755 11.106 21.6136 10.635 21.067 10.321C20.6603 10.087 20.2386 9.875 19.8079 9.69C17.1098 8.529 14.2718 8.094 10.9891 8.089Z" fill="#1E1E1C"></path>
@@ -367,6 +395,8 @@
             </div>
         </section>
     </footer>
-    <script src="/quarter/main_page/assets/js/main.js"></script>
+
+    <!--============== JAVASCRIPT ==============-->
+    <script src="/main_page/assets/js/main.js"></script>
 </body>
 </html>
