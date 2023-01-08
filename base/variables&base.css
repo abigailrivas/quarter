@@ -223,6 +223,12 @@ ul{
     font-size: 0.75rem;
 }
 
+.btn--disabled{
+    cursor: default;
+    margin-top: 1.5rem;
+    background-color: #1d1d1b;
+}
+
 /*============ SHOP ============*/ 
 .shop__product{
     width: 25%;
