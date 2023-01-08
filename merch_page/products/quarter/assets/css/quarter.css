@@ -1,0 +1,272 @@
+@import "/base/variables&base.css";
+
+/*========= PRODUCT =========*/
+/*========= Gallery =========*/
+.quarter{
+    border-top: none;
+    display: flex;
+    margin-top: 3rem;
+    height: 700px;
+}
+
+.slideshow-container{
+    display: flex;
+    width: 50%;
+    position: relative;
+}
+
+.slide{
+    display: none;
+    width: 100%;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pre, .post{
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    padding: 0 1rem;
+    font-size: 2rem;
+    top: 50%;
+}
+
+.post{
+    right: 0;
+}
+
+.dot-container{
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.dot{
+    display: inline-block;
+    border: 1px solid black;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.dot--active{
+    background-color: black;
+}
+
+/*========= Product description =========*/
+.quarter__description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    row-gap: 0.5rem;
+    border-left: 1px solid black;
+    padding: 0 4rem;
+}
+
+.quarter__description-subtitle{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.quarter__description-subtitle p{
+    margin-top: 0.5rem;
+    font-size: var(--font-small-size);
+}
+
+.quantity-title{
+    text-transform: uppercase;
+    font-size: var(--font-normal-size);
+}
+
+.quantity-container{
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.quantity-btn{
+    display: flex;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1.5px solid var(--color--brand--second);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-text);   
+    cursor: pointer;
+}
+
+.quantity-btn--active{
+    width: 2.3rem;
+    height: 2.3rem;
+    color: white;
+    background-color: var(--color--brand--second);
+}
+
+.product__choices{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.quarter--text{
+    margin-top: 1rem;
+    line-height: var(--line-height-text);
+    font-size: var(--font-small-size);
+}
+
+
+/* ========= ACCORDION & REVIEWS ======== */
+.accordion-and-reviews{
+    display: flex;
+}
+
+.accordion-container{
+    width: 50%;
+    padding: 5rem 4rem;
+}
+
+.accordion__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color--brand--second);
+    margin: 1rem 0;
+}
+
+.accordion__text{
+    font-family: var(--font-family-first);
+    line-height: var(--line-height-text);
+}
+
+.reviews{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid var(--color--brand--second);
+}
+
+.reviews h4{
+    font-size: 1.2rem;
+}
+
+.reviews__content{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    padding: 0 4rem;
+    align-items: center;
+}
+
+.review__arrow{
+    font-size: 1.5rem;
+}
+
+.reviews__description{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    text-align: center;
+}
+
+.reviews__text, .reviews__user{
+    font-style: italic;
+}
+
+.reviews__user{
+    font-family: var(--font-family-first);
+    font-weight: 600;
+}
+
+
+/* ========= DRINKS ======== */
+.drinks h2{
+    text-align: center;
+    font-size: var(--font-big-size);
+    padding: 3rem;
+    text-transform: capitalize;
+    font-style: italic;
+    border-bottom: 1px solid var(--color--brand--second);
+}
+
+.drinks-grid{
+    display: flex;
+}
+
+.drinks-grid__item{
+    width: 25%;
+    border-right: 1px solid var(--color--brand--second--dark);
+}
+
+.drinks-grid .drinks-grid__item:last-child{
+    border-right: none;
+}
+
+.video-container{
+    position: relative;
+    width: 100%;
+    padding-top: 125%;
+}
+
+.video-container video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.drinks-grid__item-text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 2rem;
+}
+
+.drinks-grid__item-text p{
+    font-size: var(--font-small-size);
+}
+
+/* ========= ABOUT US ======== */
+.about-us{
+    height: 500px;
+    background-image: url("../images/quarter_bg.PNG");
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.about-us-text{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    row-gap: 1rem;
+    margin-right: 20%;
+    color: white;
+}
+
+.about-us-text a{
+    color: white;
+    border-color: white;
+}
+
+.about-us-text h3{
+    text-transform: none;
+    font-size: var(--font-bigger-size);
+}

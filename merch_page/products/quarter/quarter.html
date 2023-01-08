@@ -8,68 +8,70 @@
 
     
     <!--============== FAVICON ==============-->
-    <link rel="shortcut icon" href="/quarter/main_page/assets/images/favicon.PNG" type="image/x-icon">
+    <link rel="shortcut icon" href="/main_page/assets/images/favicon.PNG" type="image/x-icon">
 
     <!--============== CSS ==============-->
-    <link rel="stylesheet" href="/quarter/main_page/assets/css/style.css">
-    <link rel="stylesheet" href="/quarter/merch_page/assets/css/style.css">
-    <link rel="stylesheet" href="/quarter/merch_page/products/quarter/assets/css/style.css">
+    <link rel="stylesheet" href="/main_page/assets/css/main.css">
+    <link rel="stylesheet" href="/merch_page/products/quarter/assets/css/quarter.css">
 
     <!--============== REMIXICON ==============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
     <!--============== HEADER ==============-->
-    <header class="header" id="header">
+    <header class="header non-home-header" id="header">
         <nav class="nav">
             <ul class="nav__menu">
-                <li class="nav__link">
-                    <a href="/quarter/merch_page/merch.html" class="nav__item">Merch</a>
+                <li class="nav__menu__item">
+                    <a href="/merch_page/merch.html">Merch</a>
                 </li>
-                <li class="nav__link">
-                    <a href="/quarter/merch_page/products/quarter/quarter.html" class="nav__item actual-link">Gin</a>
-                </li>
-            </ul>
-            <a href="/quarter/main_page/index.html" class="logo">
-                <img src="/quarter/main_page/assets/images/quarter-logo.svg" alt="logo">
-            </a>
-            <ul class="nav__menu">
-                <li class="nav__link">
-                    <a href="" class="nav__item">About us</a>
-                </li>
-                <li class="nav__link">
-                    <a href="" class="nav__item"><img src="/quarter/main_page/assets/images/shopping-bag (1).png" alt="" class="cart__icon"></a>
-                    <div class="count"></div>
-                </li>
-                <li class="nav__link">
-                    <a href="" class="cta">get 10% off</a>
+                <li class="nav__menu__item">
+                    <a href="/merch_page/products/quarter/quarter.html">Gin</a>
                 </li>
             </ul>
+
+            <div class="nav__menu">
+                <ul class="nav__menu">
+                    <li class="nav__menu__item">
+                        <a href="/about-us_page/about-us.html">About us</a>
+                    </li>
+                    <li class="nav__menu__item">
+                        <a href="">
+                            <img src="/main_page/assets/images/shopping-bag (1).png" alt="" class="cart__icon">
+                            <div class="count" id="counter">3</div>
+                        </a>
+                    </li>
+                </ul>
+                <a href="" class="cta" id="fixed-cta-menu">get 10% off</a>
+            </div>
         </nav>
+        <a href="/main_page/index.html">
+            <img src="/main_page/assets/images/quarter-logo.svg" alt="logo" class="logo--header logo--header-fixed" id="logoHeader">
+        </a>
     </header>
     <main class="main">
         <section class="quarter">
             <div class="slideshow-container">
                 <div class="slide">
-                    <img src="/quarter/main_page/assets/images/shop__product__gin.PNG" alt="">
+                    <img src="/main_page/assets/images/shop__product__gin.PNG" alt="gin">
                 </div>
                 <div class="slide">
-                    <img src="/quarter/merch_page/products/quarter/assets/images/quarter_1.PNG" alt="">
+                    <img src="/merch_page/products/quarter/assets/images/quarter_1.PNG" alt="gin">
                 </div>
                 <div class="slide">
-                    <img src="/quarter/merch_page/products/quarter/assets/images/quarter_3.PNG" alt="">
+                    <img src="/merch_page/products/quarter/assets/images/quarter_3.PNG" alt="gin">
                 </div>
                 <div class="slide">
-                    <img src="/quarter/merch_page/products/quarter/assets/images/quarter_2.PNG" alt="">
+                    <img src="/merch_page/products/quarter/assets/images/quarter_2.PNG" alt="gin">
                 </div>
                 <div class="slide">
-                    <img src="/quarter/merch_page/products/quarter/assets/images/quarter_4.PNG" alt="">
+                    <img src="/merch_page/products/quarter/assets/images/quarter_4.PNG" alt="gin">
                 </div>
 
                 <a class="pre" onclick="plusSlides(-1)"><i class="ri-arrow-left-line"></i></a>
                 <a class="post" onclick="plusSlides(1)"><i class="ri-arrow-right-line"></i></a>
 
-                <div class="dots">
+                <div class="dot-container">
                     <span class="dot" onclick="slideActual(1)"></span>
                     <span class="dot" onclick="slideActual(2)"></span>
                     <span class="dot" onclick="slideActual(3)"></span>
@@ -77,163 +79,166 @@
                     <span class="dot" onclick="slideActual(5)"></span>
                 </div>
             </div>
+
             <div class="quarter__description">
-                <h2>Quarter G/N</h2>
+                <h1>Quarter G/N</h1>
                 <div class="quarter__description-subtitle">
-                    <p class="quarter__description-info">Distilled in England</p>
+                    <p><em>Distilled in England</em></p>
                     <p>12% vol | 70cl</p>
                 </div>
                 <div class="line"></div>
+
                 <p class="quantity-title">Quantity</p>
                 <div class="quantity-container">
-                    <span class="quantity-item quantity-active" onclick="quantitySelection(0)">1</span>
-                    <span class="quantity-item" onclick="quantitySelection(1)">2</span>
-                    <span class="quantity-item" onclick="quantitySelection(2)">6</span>
+                    <span class="quantity-btn" onclick="quantitySelection(0)">1</span>
+                    <span class="quantity-btn" onclick="quantitySelection(1)">2</span>
+                    <span class="quantity-btn" onclick="quantitySelection(2)">6</span>
                 </div>
+
                 <div class="product__choices">
-                    <div class="cta product-button">
-                        <p><span> £ 27.00 </span>- Add to bag</p>
+                    <a href="#" class="cta btn--icon btn--product">
+                        <p>£<span id="price"></span>- Add to bag</p>
                         <span>|</span>
-                        <i class="ri-arrow-right-up-line"></i>
-                    </div>
-                    <div class="secondary-button">
-                        <p><span> £ 24.30 </span> - Subscribe</p>
+                        <i class="ri-arrow-right-up-line btn--icon__arrow"></i>
+                    </a>
+                    <a href="#" class="btn-third btn--icon btn--product">
+                        <p>£<span id="subscription"></span> - Subscribe</p>
                         <span>|</span>
-                        <i class="ri-arrow-right-up-line"></i>
-                    </div>
+                        <i class="ri-arrow-right-up-line btn--icon__arrow"></i>
+                    </a>
                 </div>
-                <h4>Who said it had to be all or nothing?</h4>
-                <p class="quarter-text">The world’s first quarter strength G/N, delivering all the flavour and experience you’d expect from a full-strength gin, just with a fraction of the alcohol. Distilled and blended in England for that lip-smacking taste to create memorable lower strength gin cocktails.</p>
+
+                <h3>Who said it had to be all or nothing?</h3>
+                <p class="quarter--text">
+                    The world’s first quarter strength G/N, delivering all the flavour and experience you’d expect from a full-strength 
+                    gin, just with a fraction of the alcohol. Distilled and blended in England for that
+                    lip-smacking taste to create memorable lower strength gin cocktails.
+                </p>
             </div>
         </section>
+
         <div class="clients__container">
             <div class="clients__content">
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client1.png" alt="">
+                    <img src="/main_page/assets/images/client1.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client2.png" alt="">
+                    <img src="/main_page/assets/images/client2.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client3.png" alt="">
+                    <img src="/main_page/assets/images/client3.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client4.png" alt="">
+                    <img src="/main_page/assets/images/client4.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client5.png" alt="">
+                    <img src="/main_page/assets/images/client5.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client6.png" alt="">
+                    <img src="/main_page/assets/images/client6.png" alt="">
                 </div>
             </div>
             <div class="clients__content">
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client1.png" alt="">
+                    <img src="/main_page/assets/images/client1.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client2.png" alt="">
+                    <img src="/main_page/assets/images/client2.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client3.png" alt="">
+                    <img src="/main_page/assets/images/client3.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client4.png" alt="">
+                    <img src="/main_page/assets/images/client4.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client5.png" alt="">
+                    <img src="/main_page/assets/images/client5.png" alt="">
                 </div>
                 <div class="clients__logo">
-                    <img src="/quarter/main_page/assets/images/client6.png" alt="">
+                    <img src="/main_page/assets/images/client6.png" alt="">
                 </div>
             </div>
         </div>
-        <section class="accordion-and-reviews">
-            <div class="accordion__container">
-                <div class="accordion__group">
-                    <div class="accordion__item">
-                        <header class="accordion__header">
-                            <h4 class="accordion__header-title">
-                                Why G/N?
-                            </h4>
-                            <i class="ri-arrow-right-line"></i>
-                        </header>
-                        <div class="accordion__content">
-                            <p class="accordion__text">
-                                The powers that be (the Gin guild) claim that to be called a gin, the spirit must be above 37.5% abv. We think it’s nonsense as we distill and blend our G/N in the exact same method.
-                                <a href="/quarter/about-us/aboutus.html">Read more here</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <header class="accordion__header">
-                            <h4 class="accordion__header-title">
-                                Production method
-                            </h4>
-                            <i class="ri-arrow-right-line"></i>
-                        </header>
-                        <div class="accordion__content">
-                            <p class="accordion__text">
-                                We worked with the best distiller in the game, to turn the concept of gin on its head and craft the world’s first London Dry Gin at 12% Vol. A year in product development, 10,000 juniper berries, 1,000 oranges, 100 grapefruit peels and 60 liquids later, we finally cracked it!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <header class="accordion__header">
-                            <h4 class="accordion__header-title">
-                                Botanicals
-                            </h4>
-                            <i class="ri-arrow-right-line"></i>
-                        </header>
-                        <div class="accordion__content">
-                            <p class="accordion__text">
-                                As a London Dry, you won’t be surprised to see the usual suspects of juniper, coriander and angelica featuring in our liquid. However, it is the inclusion of the orange peel, grapefruit peel and sweet orange that makes unique blend so refreshing and delicious!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <header class="accordion__header">
-                            <h4 class="accordion__header-title">
-                                Nose
-                            </h4>
-                            <i class="ri-arrow-right-line"></i>
-                        </header>
-                        <div class="accordion__content">
-                            <p class="accordion__text">
-                                Once you pop the cork, you will be hit with a fresh citrussy smack of orange sherbet, and will feel compelled to get pouring and mixing up your favourite gin cocktails (no measures required!).
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <header class="accordion__header">
-                            <h4 class="accordion__header-title">
-                                Flavour
-                            </h4>
-                            <i class="ri-arrow-right-line"></i>
-                        </header>
-                        <div class="accordion__content">
-                            <p class="accordion__text">
-                                ‘Due to our unique production process, where we use a higher contraction of botanicals and a longer maceration process than with full-strength gins. You’ll taste a London Dry Gin flavour profile, but also get a fresh punch of citrus from the orange and grapefruit peel.’
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <header class="accordion__header">
-                            <h4 class="accordion__header-title">
-                                Mouthfeel
-                            </h4>
-                            <i class="ri-arrow-right-line"></i>
-                        </header>
-                        <div class="accordion__content">
-                            <p class="accordion__text">
-                                Once on the palette, our refreshingly light G/N delivers all the viscosity, body and warmth of a fuller strength spirit. You will be left with a nice slow, warm burn and the botanicals slowly dancing around the mouth, inviting you to take another sip.
-                            </p>
-                        </div>
-                    </div>
 
+    <!--============== ACCORDION AND REVIEWS ==============-->
+        <section class="accordion-and-reviews">
+            <div class="accordion-container">
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <h4>Why G/N?</h4>
+                        <i class="ri-arrow-right-line"></i>
+                    </header>
+                    <div class="accordion__content">
+                        <p class="accordion__text">
+                            The powers that be (the Gin guild) claim that to be called a gin, the spirit must be above 37.5% abv. We think it’s nonsense as we distill and blend our G/N in the exact same method.
+                            <a href="/about-us_page/about-us.html" target="_blank">Read more here</a>
+                        </p>
+                    </div>
                 </div>
 
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <h4>Production method</h4>
+                        <i class="ri-arrow-right-line"></i>
+                    </header>
+                    <div class="accordion__content">
+                        <p class="accordion__text">
+                            We worked with the best distiller in the game, to turn the concept of gin on its head and craft the world’s first London Dry Gin at 12% Vol. A year in product development, 10,000 juniper berries, 1,000 oranges, 100 grapefruit peels and 60 liquids later, we finally cracked it!
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <h4>Botanicals</h4>
+                        <i class="ri-arrow-right-line"></i>
+                    </header>
+                    <div class="accordion__content">
+                        <p class="accordion__text">
+                            As a London Dry, you won’t be surprised to see the usual suspects of juniper, coriander and angelica featuring in our liquid. However, it is the inclusion of the orange peel, grapefruit peel and sweet orange that makes unique blend so refreshing and delicious!
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <h4 class="accordion__header-title">
+                            Nose
+                        </h4>
+                        <i class="ri-arrow-right-line"></i>
+                    </header>
+                    <div class="accordion__content">
+                        <p class="accordion__text">
+                            Once you pop the cork, you will be hit with a fresh citrussy smack of orange sherbet, and will feel compelled to get pouring and mixing up your favourite gin cocktails (no measures required!).
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <h4 class="accordion__header-title">
+                            Flavour
+                        </h4>
+                        <i class="ri-arrow-right-line"></i>
+                    </header>
+                    <div class="accordion__content">
+                        <p class="accordion__text">
+                            ‘Due to our unique production process, where we use a higher contraction of botanicals and a longer maceration process than with full-strength gins. You’ll taste a London Dry Gin flavour profile, but also get a fresh punch of citrus from the orange and grapefruit peel.’
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <header class="accordion__header">
+                        <h4 class="accordion__header-title">
+                            Mouthfeel
+                        </h4>
+                        <i class="ri-arrow-right-line"></i>
+                    </header>
+                    <div class="accordion__content">
+                        <p class="accordion__text">
+                            Once on the palette, our refreshingly light G/N delivers all the viscosity, body and warmth of a fuller strength spirit. You will be left with a nice slow, warm burn and the botanicals slowly dancing around the mouth, inviting you to take another sip.
+                        </p>
+                    </div>
+                </div>
             </div>
+
             <div class="reviews">
                 <h4>The 5 reviews speak for themselves</h4>
                 <div class="reviews__content">
@@ -248,38 +253,94 @@
                 </div>
             </div>
         </section>
+
+        <!--============== DRINKS ==============-->
         <section class="drinks">
             <h2>Fancy a drink?</h2>
-            <div class="drinks__container">
-                <div class="drink">
-                    <img src="" alt="">
-                    <div class="drink__description">
+            <div class="drinks-grid">
+                <div class= "drinks-grid__item">
+                    <div class="video-container">
+                        <video src="./assets/images/The_Quarter_Tonic_Music.mp4" muted controls poster="./assets/images/tonic.PNG"></video>
+                    </div>
+                    <div class="drinks-grid__item-text">
                         <h3>Quarter & Tonic</h3>
-                        <p>50ml Quarter Gin, 150ml Light Tonic, Grapefruit Garnish <br>
-                            Pour gin into a highball over ice, mix in the tonic, garnish with Grapefruit and enjoy! <br>
-                            50 Calories vs. 250 Calories <br>
-                            3% Vol vs. 12% Vol <br>
+                        <p>
+                            <em>
+                            50ml Quarter Gin, 150ml Light Tonic, Grapefruit Garnish <br><br>
+                            Pour gin into a highball over ice, mix in the tonic, garnish with Grapefruit and enjoy! <br><br>
+                            50 Calories vs. 250 Calories 3% Vol vs. 12% Vol 
+                            </em>
                         </p>
                     </div>
                 </div>
-                <div class="drink">
-                    <img src="" alt="">
-                    <div class="drink__description">
+
+                <div class= "drinks-grid__item">
+                    <div class="video-container">
+                        <video src="./assets/images/The_Quarter_Negroni_Music.mp4" muted controls poster="./assets/images/negroni.PNG"></video>
+                    </div>
+                    <div class="drinks-grid__item-text">
                         <h3>Quarter Negroni</h3>
-                        <p>25ml Quarter Gin, 25ml Campari, 25ml Dodin Rosso, Orange Garnish <br>
-                            Pour all liquid into a tumbler over ice, stir for 20sec, garnish with orange twist <br>
-                            100 Calories vs. 150 Calories 14.5% Vol vs. 25% Vol <br>
+                        <p>
+                            <em>
+                            25ml Quarter Gin, 25ml Campari, 25ml Dodin Rosso, Orange Garnish <br><br>
+                            Pour all liquid into a tumbler over ice, stir for 20sec, garnish with orange twist <br><br>
+                            100 Calories vs. 150 Calories 14.5% Vol vs. 25% Vol 
+                            </em>
+                        </p>
+                    </div>
+                </div>
+
+                <div class= "drinks-grid__item">
+                    <div class="video-container">
+                        <video src="./assets/images/The_Quarter_Spritz_Music.mp4" muted controls poster="./assets/images/spritz.PNG"></video>
+                    </div>
+                    <div class="drinks-grid__item-text">
+                        <h3>Quarter Grapefruit Spritz</h3>
+                        <p>
+                            <em>
+                            50ml Quarter Gin, 100ml Grapefruit Juice, Prosecco, Grapefruit & Mint Garnish <br><br>
+                            Squeeze fresh grapefruit juice then pour into a large wine glass with ice. Add Quarter Gin and then top with Prosecco. Stir and then garnish with mint and a slice of grapefruit <br><br>
+                            150 Calories vs. 200 Calories 5% Vol vs. 10% Vol
+                            </em>
+                        </p>
+                    </div>
+                </div>
+
+                <div class= "drinks-grid__item">
+                    <div class="video-container">
+                        <video src="./assets/images/The_Quarter_Martini_Music.mp4" muted controls poster="./assets/images/gin.PNG"></video>
+                    </div>
+                    <div class="drinks-grid__item-text">
+                        <h3>Quarter Gin Sour</h3>
+                        <p>
+                            <em>
+                            50ml Quarter Gin, Egg White, Juice of 1 Lemon, Simple Sugar Syrup <br><br>
+                            Pour all ingredients into a cocktail shaker and start shaking!
+                            After 20 seconds pour slowly into a chilled martini glass. Garnish with lemon twist <br><br>
+                            100 Calories vs. 150 Calories 5% Vol vs. 10% Vol
+                            </em>
                         </p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!--============== ABOUT US ==============-->
         <section class="about-us">
-            <h1>A <span class="about-us-title-change">quest</span> for <br>
-                <span class="about-us-title-change">quality</span>
-            </h1>
+            <div class="about-us-text">
+                <h3>
+                    A <em>quest</em> for <br> <em>quality</em>
+                </h3>
+                <p>We wanted the perfect lower alcohol cocktail partner</p>
+                <a href="/about-us_page/about-us.html" target="_blank" rel="noopener noreferrer" class="btn-third btn--icon">
+                    <p>Find out more</p>
+                    <span>|</span>
+                    <i class="ri-arrow-right-up-line btn--icon__arrow"></i>
+                </a>
+            </div>
         </section>
     </main>
+    <!--============== FOOTER ==============-->
     <footer>
         <section class="footer">
             <div class="footer__image">
@@ -330,37 +391,39 @@
                     </g>
                 </svg>
             </div>
+
             <div class="footer__subscription">
                 <p class="footer__subscription__text">
                     Sign up to our newsletter to join the Quarter gang
                 </p>
                 <div class="footer__subscription__form">
                     <input type="text" name="contact[email]" id="contact-email" placeholder="EMAIL" aria-label="Email" aria-required="true" required autocapitalize="off" class="input__email">
-                    <a href="" class="subscription__button">Sign up</a>
+                    <a href="" class="btn-second">Sign up</a>
                 </div>
             </div>
+            
             <div class="footer__nav__container">
                 <ul class="footer__nav">
-                    <li><a href="" class="footer__nav__item">T&Cs</a></li>
-                    <li><a href="" class="footer__nav__item">About</a></li>
-                    <li><a href="" class="footer__nav__item">Refund policy</a></li>
+                    <li><a href="">T&Cs</a></li>
+                    <li><a href="/about-us_page/about-us.html">About Us</a></li>
+                    <li><a href="">Refund policy</a></li>
                 </ul>
                 <ul class="footer__nav">
-                    <li><a href="" class="footer__nav__item">Privacy Policy</a></li>
-                    <li><a href="" class="footer__nav__item">FAQs</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">FAQs</a></li>
                 </ul>
                 <ul class="footer__nav">
-                    <li><a href="" class="footer__nav__item">Contact Us</a></li>
-                    <li><a href="" class="footer__nav__item">Shipping & Returns</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Shipping & Returns</a></li>
                 </ul>
-                <div class="social__media__container">
-                    <a href="" class="social__media">
+                <div class="social-media__container">
+                    <a href="#">
                         <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.5254 26.446C20.6167 26.446 26.3653 20.6933 26.3653 13.597C26.3653 6.50069 20.6167 0.748 13.5254 0.748C6.43407 0.748 0.685432 6.50069 0.685432 13.597C0.685432 20.6933 6.43407 26.446 13.5254 26.446Z" stroke="#1E1E1C" stroke-width="0.75" stroke-miterlimit="10"></path>
                             <path d="M14.2649 11.399V9.805C14.2649 9.805 14.2649 8.759 15.5839 8.759C16.903 8.759 16.903 8.759 16.903 8.759V6.556H14.7425C14.7425 6.556 11.9195 6.374 11.9195 9.381C11.9565 11.068 11.9195 11.398 11.9195 11.398H10.1478V14.038H11.8256V20.638H14.2649V14.038H16.5732V11.398H14.2649V11.399Z" stroke="#1E1E1C" stroke-width="0.75" stroke-miterlimit="10"></path>
                         </svg>
                     </a>
-                    <a href="" class="social__media">
+                    <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
                             <path d="M13.224 26.2581C20.3203 26.2581 26.073 20.5054 26.073 13.4091C26.073 6.31275 20.3203 0.560059 13.224 0.560059C6.12769 0.560059 0.375 6.31275 0.375 13.4091C0.375 20.5054 6.12769 26.2581 13.224 26.2581Z" stroke="#1E1E1C" stroke-width="0.75" stroke-miterlimit="10"></path>
                             <path d="M16.715 20.423H9.73298C7.78698 20.423 6.20898 18.845 6.20898 16.899V9.91804C6.20898 7.97204 7.78698 6.39404 9.73298 6.39404H16.715C18.661 6.39404 20.239 7.97204 20.239 9.91804V16.9C20.239 18.846 18.661 20.423 16.715 20.423Z" stroke="#1E1E1C" stroke-width="0.75" stroke-miterlimit="10"></path>
@@ -368,7 +431,7 @@
                             <path d="M17.101 10.0851C17.5086 10.0851 17.839 9.75472 17.839 9.34713C17.839 8.93954 17.5086 8.60913 17.101 8.60913C16.6934 8.60913 16.363 8.93954 16.363 9.34713C16.363 9.75472 16.6934 10.0851 17.101 10.0851Z" stroke="#1E1E1C" stroke-width="0.75" stroke-miterlimit="10"></path>
                         </svg>
                     </a>
-                    <a href="" class="social__media">
+                    <a href="#">
                         <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.4993 26.446C20.5906 26.446 26.3393 20.6933 26.3393 13.597C26.3393 6.50069 20.5906 0.748 13.4993 0.748C6.40801 0.748 0.659378 6.50069 0.659378 13.597C0.659378 20.6933 6.40801 26.446 13.4993 26.446Z" stroke="#1E1E1C" stroke-width="0.75" stroke-miterlimit="10"></path>
                             <path d="M11.3558 7.497C14.0359 7.548 16.6561 7.915 19.1703 8.859C19.9588 9.155 20.7242 9.531 21.4597 9.941C22.1332 10.316 22.3401 11.054 22.0533 11.703C21.7755 12.331 21.078 12.662 20.4154 12.47C20.2815 12.431 20.1526 12.367 20.0287 12.301C16.4922 10.407 12.6969 10.083 8.79363 10.476C8.00319 10.556 7.22675 10.772 6.4433 10.924C6.3054 10.951 6.1665 10.984 6.0266 10.995C5.27113 11.059 4.65057 10.623 4.49967 9.928C4.34878 9.232 4.71452 8.529 5.44301 8.328C6.34537 8.078 7.26771 7.869 8.19506 7.743C9.24132 7.602 10.3016 7.574 11.3558 7.497ZM10.9891 8.089C9.74997 8.072 8.16109 8.213 6.59619 8.566C6.23045 8.648 5.86071 8.738 5.51496 8.879C5.10425 9.047 4.93736 9.456 5.04928 9.87C5.15521 10.26 5.54193 10.522 5.96663 10.475C6.12852 10.457 6.28741 10.406 6.4473 10.364C9.17437 9.652 11.9334 9.643 14.7015 10.029C16.6461 10.3 18.5098 10.842 20.2406 11.802C20.7932 12.109 21.2888 11.989 21.5307 11.55C21.7755 11.106 21.6136 10.635 21.067 10.321C20.6603 10.087 20.2386 9.875 19.8079 9.69C17.1098 8.529 14.2718 8.094 10.9891 8.089Z" fill="#1E1E1C"></path>
@@ -381,6 +444,6 @@
         </section>
     </footer>
     <script src="/quarter/main_page/assets/js/main.js"></script>
-    <script src="/quarter/merch_page/products/quarter/assets/js/quarter.js"></script>
+    <script src="/merch_page/products/quarter/assets/js/quarter.js"></script>
 </body>
 </html>

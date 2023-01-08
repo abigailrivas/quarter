@@ -23,7 +23,7 @@
     --font-bigger-size: 4rem;
     --font-big-size: 2.5rem;
     --font-normal-size: 1rem;
-    --font-small-size: 0.75rem;
+    --font-small-size: 0.85rem;
 
     --line-height-text: 1.5rem;
 
@@ -185,6 +185,13 @@ ul{
     font-size: var(--font-small-size);
 }
 
+.btn-second, .btn-third{
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
 .btn-second{
     background-color: var(--color--brand--second--dark);
     color: white;
@@ -194,14 +201,8 @@ ul{
     border: 1px solid var(--color--brand--second--dark);
 }
 
-.btn-second, .btn-third{
-    padding: 1rem 2rem;
-    text-align: center;
-}
-
 .btn--icon{
     display: flex;
-    flex-direction: row;
     column-gap: 1rem;
     margin-right: auto;
     margin-top: 1.5rem;
@@ -211,6 +212,16 @@ ul{
     transform: rotate(45deg);
 }
 
+.btn--product{
+    column-gap: 0.5rem;
+    margin-right: 0;
+    padding: 0 1rem;
+}
+
+.btn--product p{
+    text-transform: uppercase;
+    font-size: var(--font-small-size);
+}
 
 /*============ SHOP ============*/ 
 .shop__product{
