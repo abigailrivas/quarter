@@ -78,5 +78,27 @@ function openAccordionItem(n) {
 
 
 // ======= REVIEWS ======== 
+let reviews = document.getElementsByClassName("reviews__description");
+let indexReviews = 0;
+showReview(indexReviews);
 
+function changeReview(n) {
+    indexReviews += n;
+    showReview(indexReviews);
+}
+
+function showReview(n) {
+    if (n == reviews.length){
+        indexReviews = 0;
+    } else if (n == -1){
+        indexReviews = reviews.length - 1;
+    }
+    for (let i = 0; i < reviews.length; i++) {
+        if( i != indexReviews){
+            reviews[i].style.display= "none";
+        }
+        
+    }
+    reviews[indexReviews].style.display= "flex";
+}
 

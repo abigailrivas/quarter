@@ -220,7 +220,7 @@ ul{
 
 .btn--product p{
     text-transform: uppercase;
-    font-size: var(--font-small-size);
+    font-size: 0.75rem;
 }
 
 /*============ SHOP ============*/ 
