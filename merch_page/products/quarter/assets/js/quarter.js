@@ -68,3 +68,15 @@ function quantitySelection(n) {
 
 
 // ======= ACCORDION ======== 
+let accordion = document.getElementsByClassName("accordion__header");
+let accordionContent = document.getElementsByClassName("accordion__content");
+
+function openAccordionItem(n) {
+    accordionContent[n].style.display = "block";
+    accordion[n].className += " accordion__header--active";
+}
+
+
+// ======= REVIEWS ======== 
+
+
